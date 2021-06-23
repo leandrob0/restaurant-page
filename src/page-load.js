@@ -22,9 +22,12 @@ function pageLoad() {
     const nav2 = document.createElement('a');
     const nav3 = document.createElement('a');
 
+    nav1.setAttribute('href','#');
+    nav2.setAttribute('href','#');
+    nav3.setAttribute('href','#');
+
     divTitle.classList.add('title-container');
     divLinks.classList.add('link-container');
-
     title.classList.add('title');
     nav1.classList.add('link');
     nav2.classList.add('link');
@@ -47,4 +50,4 @@ function pageLoad() {
     body.appendChild(header);
 }
 
-pageLoad();
+export { pageLoad }
