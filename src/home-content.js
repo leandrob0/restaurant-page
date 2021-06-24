@@ -18,8 +18,4 @@ function homeContent() {
     body.appendChild(homeContainer);
 }
 
-function removeHome() {
-    body.lastChild.remove();
-}
-
-export { homeContent , removeHome }
+export { homeContent }

@@ -1,6 +1,13 @@
 import { pageLoad } from './page-load.js';
-import { homeContent, removeHome} from './home-content.js';
+import { homeContent } from './home-content.js';
 import { loadMenu } from './menu.js';
+import { loadContact } from './contact.js';
+
+//DELETES THE CURRENT CONTENT SHOWING
+const body = document.querySelector('body');
+function removeCurrent() {
+    body.lastChild.remove();
+}
 
 pageLoad();
 
@@ -10,9 +17,15 @@ const contactButton = document.querySelector('#contact');
 
 homeContent();
 
-homeButton.addEventListener('click', homeContent);
+homeButton.addEventListener('click', () => {
+    removeCurrent();
+    homeContent();
+});
 menuButton.addEventListener('click', () => {
-    removeHome();
+    removeCurrent();
     loadMenu();
 });
-contactButton.addEventListener('click', () => {console.log("hello!")});
+contactButton.addEventListener('click', () => {
+    removeCurrent();
+    loadContact();
+});
