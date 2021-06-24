@@ -1,7 +1,8 @@
 import './style.css';
 
+const body = document.querySelector("body");
+
 function pageLoad() {
-    const body = document.querySelector("body");
 
     body.classList.add("body");
 
@@ -25,6 +26,10 @@ function pageLoad() {
     nav1.setAttribute('href','#');
     nav2.setAttribute('href','#');
     nav3.setAttribute('href','#');
+
+    nav1.setAttribute('id', 'home');
+    nav2.setAttribute('id', 'menu');
+    nav3.setAttribute('id', 'contact');
 
     divTitle.classList.add('title-container');
     divLinks.classList.add('link-container');

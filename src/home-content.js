@@ -1,7 +1,8 @@
 import './style.css';
 
+const body = document.querySelector("body");
+
 function homeContent() {
-    const body = document.querySelector("body");
 
     body.classList.add("body");
 
@@ -11,10 +12,14 @@ function homeContent() {
     homeContainer.classList.add('home-container');
     textHome.classList.add('text-home');
 
-    textHome.innerText = "Cras dignissim scelerisque ante. Suspendisse finibus sit amet sapien vel pellentesque. Nunc rhoncus eget lorem ut porttitor. Nunc vitae mi vulputate, euismod arcu eget, sodales lacus. Mauris sit amet nulla nibh. Curabitur vel nisi odio. Proin aliquam ultrices commodo.";
+    textHome.innerText = "Welcome to leandro's Pizzeria!\n We have the best pizza in the region, to know more about our products check the menu tab! And to know about how to contact us, check the contact tab! ENJOY!";
 
     homeContainer.appendChild(textHome);
     body.appendChild(homeContainer);
 }
 
-export { homeContent }
+function removeHome() {
+    body.lastChild.remove();
+}
+
+export { homeContent , removeHome }
